@@ -1,0 +1,15 @@
+@tailwind base;
+
+@layer base {
+    :root {
+        --blue-100: #dcfce7;
+        --blue-200: #bbf7d0;
+        --blue-300: #86efac;
+        --blue-400: #4ade80;
+        --blue-500: #22c55e;
+        --blue-600: #16a34a;
+        --blue-700: #15803d;
+        --blue-800: #166534;
+        --blue-900: #14532d;   
+    }
+}
