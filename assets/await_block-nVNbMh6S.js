@@ -1,0 +1,62 @@
+import {ag as o, ah as p, ai as a, g, d as m, f as v, t as x, aj as w} from "./index-BsTNpDop.js";
+function C(e, t) {
+    const h = t.token = {};
+    function c(r, s, d, k) {
+        if (t.token !== h)
+            return;
+        t.resolved = k;
+        let u = t.ctx;
+        d !== void 0 && (u = u.slice(),
+        u[d] = k);
+        const l = r && (t.current = r)(u);
+        let b = !1;
+        t.block && (t.blocks ? t.blocks.forEach( (n, _) => {
+            _ !== s && n && (g(),
+            m(n, 1, 1, () => {
+                t.blocks[_] === n && (t.blocks[_] = null)
+            }
+            ),
+            v())
+        }
+        ) : t.block.d(1),
+        l.c(),
+        x(l, 1),
+        l.m(t.mount(), t.anchor),
+        b = !0),
+        t.block = l,
+        t.blocks && (t.blocks[s] = l),
+        b && w()
+    }
+    if (o(e)) {
+        const r = p();
+        if (e.then(s => {
+            a(r),
+            c(t.then, 1, t.value, s),
+            a(null)
+        }
+        , s => {
+            if (a(r),
+            c(t.catch, 2, t.error, s),
+            a(null),
+            !t.hasCatch)
+                throw s
+        }
+        ),
+        t.current !== t.pending)
+            return c(t.pending, 0),
+            !0
+    } else {
+        if (t.current !== t.then)
+            return c(t.then, 1, t.value, e),
+            !0;
+        t.resolved = e
+    }
+}
+function E(e, t, h) {
+    const c = t.slice()
+      , {resolved: r} = e;
+    e.current === e.then && (c[e.value] = r),
+    e.current === e.catch && (c[e.error] = r),
+    e.block.p(c, h)
+}
+export {C as h, E as u};
